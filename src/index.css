@@ -1,0 +1,480 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+body {  font-family: "Ubuntu", sans-serif;
+  margin: 0;  
+  background-color: hsl(229, 24%, 87%);
+}
+
+button {  
+  font-family: "Ubuntu", sans-serif;
+}
+
+
+
+
+/* App */
+.container {  
+  display: flex;  
+  background-color: rgb(255, 255, 255);
+  margin-top: 3%;  
+  margin-left: auto;  
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 20px 20px 20px rgba(47, 18, 18, 0.101);
+  width: 1000px;  
+  height: 568px;
+}
+
+/* Stepper */
+.displayStep {  
+  display: flex;  
+  justify-content: center;
+  width: 274px;  
+  height: 568px;
+  background-color: rgba(30, 16, 186, 0);
+  background-image:  url(./assets/image/logo.svg);
+}
+
+.stepContainer {
+  background-color: rgba(210, 96, 14, 0);
+  width: 50%;  
+  height: 550px;
+  margin-top: auto;  
+  margin-left: auto;
+  margin-right: auto;  
+  margin-bottom: auto;
+}
+.circle {  
+  position: relative;
+  background-color: rgba(220, 20, 60, 0);
+  width: 20%;  
+  color: white;  
+  font-weight: 500;  
+  height: 50%;
+  margin-top: 15%;  
+  display: flex;  
+  flex-direction: column;
+  justify-content: space-between;  
+  align-items: center;
+}
+.circle p {  margin-top: 10px;}
+.circle_active {  
+  width: 40px;  
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  border: solid 1px white;  
+  display: flex;
+  justify-content: center;  
+  color: black;
+}
+.circle_default {  
+  width: 40px;  
+  height: 40px;
+  border-radius: 20px;  
+  background-color: rgba(0, 0, 0, 0);
+  border: solid 1px white;  
+  display: flex;
+  justify-content: center;
+}
+
+.steps {  
+  position: relative;
+  background-color: rgba(255, 255, 0, 0);
+  display: flex;  flex-direction: column;
+  justify-content: space-between;  width: 60%;
+  height: 50%;  margin-top: 15%;
+  margin-left: 0%;
+  font-weight: bold;
+}
+
+.step1 { 
+   position: inherit;  
+   padding-left: 5px;
+  background-color: rgba(156, 55, 55, 0);
+}
+
+.steps p {  
+  margin-bottom: 0px;
+  margin-top: 0px;  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+}
+
+.steps span {  
+  color: white;
+}
+
+/* Stepper */
+
+
+/* step component */
+
+#stepInfo {  
+  display: flex;  
+  flex-direction: column;}
+
+#stepPlan {  
+  display: flex;  
+  flex-direction: column;}
+
+#stepAddOn {  
+  display: flex;  
+  flex-direction: column;
+}
+
+#stepSummary {  display: flex;  flex-direction: column;}
+
+#stepThankYou {  display: flex;  flex-direction: column;
+  align-items: center;  margin-top: 150px;}
+#stepThankYou p{ text-align: center;}
+
+#stepThankYou img {  width: 80px;}
+
+#stepInfo input {  width: 100%;  height: 40px;
+  border-radius: 5px;
+  border: solid 1px rgba(103, 92, 92, 0.628);
+}
+
+#stepInfo input:focus {
+  border:  solid rgba(101px3, 92, 92, 0.628) !important;
+}
+#stepInfo input.error {
+  border: solid 1px rgba(183, 5, 5, 0.628);
+}
+
+/* step component */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.buttonContainer {  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 255, 51, 0);  padding-top: 39px;
+  text-align: right;
+
+  
+}
+.nextBtn {  padding: 15px 20px 15px 20px;
+  width: 120px;  background-color: hsl(213, 96%, 18%);
+  color: white;  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 255, 0);
+  cursor: pointer;  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.nextBtn:hover {  background-color: hsla(243, 100%, 62%, 0.423);}
+.nextBtn:focus {  background-color: hsl(213, 96%, 18%); }
+
+.addOnButton {  display: flex;  justify-content: space-between;
+  align-items: center;  margin-top: 10px;
+  border: solid 1px palevioletred;
+  border-radius: 10px;  height: 80px;  padding: 0px 30px 0px 30px;
+}
+.addOnButton:hover {  border: solid 1px hsl(229, 77%, 52%);}
+.addOnButton.active {  border: solid 1px  hsl(213, 96%, 18%);}
+.addOnButton p {  margin-top: 2px;  margin-bottom: 2px;
+  margin-left: 20px;  font-weight: bold;
+}
+
+.addOnButton span {  margin-left: 20px;  font-size: 15px;}
+
+
+
+
+.description {    margin-top: 0; color: #555;  }
+
+
+.regroup {  display: flex;}
+
+.planMonth {  display: flex;  justify-content: space-between;}
+
+.planButton {  display: flex;  flex-direction: column;
+  border-radius: 10px;  width: 30%;  height: 200px;
+  border: solid 1px hsl(229, 24%, 87%);
+  background-color: white;  cursor: pointer;
+}
+
+.planButton:hover {  border: solid 1px hsl(213, 96%, 18%);}
+
+.planButton.active {  border: solid 1px hsl(213, 96%, 18%);}
+
+.planButton img {  margin-top: 14px;  margin-left: 8px;}
+
+.planButton p {  font-size: 18px;  margin-top: 50px;
+  margin-left: 8px;  margin-bottom: 8px;}
+
+.planButton span {  margin-left: 8px;  color: hsl(231, 11%, 63%  ); margin-top: 5px;}
+.planButton .yeartype {  margin-left: 8px; color: #222;}
+
+
+.free {  cursor: pointer;  margin-left: 8px;  font-size: 12px;}
+
+#modeTotal {  color: hsl(231, 11%, 63%);}
+
+.switch {  justify-content: center;  display: flex;
+  width: 100%;  height: 56px;
+  background-color: hsl(217, 100%, 97%);
+  border-radius: 10px;  margin-top: 25px;}
+
+.check {  display: inline-block;  position: relative;
+  width: 40px;  height: 20px;  cursor: pointer;
+  overflow: hidden;  margin-top: 15px;  margin-left: 10px;
+  margin-right: 10px;}
+
+.check input {  position: absolute;  top: -30px;
+  left: -30px;  width: 0;  height: 0;}
+
+.check input + span {  position: absolute;
+  top: 0;  bottom: 0;  left: 0;
+  right: 0;  background: hsl(213, 96%, 18%);
+  border-radius: 20px;}
+
+.check input:checked + span {  background: hsl(213, 39%, 19%);}
+
+.check input + span:before {
+  content: "";  display: inline-block;  position: absolute;
+  top: 50%;  left: 4px;  width: 12px;
+  height: 12px;  background: white;  border-radius: 50%;
+  transform: translateY(-50%);  transition: all 0.5s;
+}
+.check input:checked + span:before {  left: 24px;}
+.free {  margin-top: 10px;}
+
+
+#addonMois {  flex-direction: column;}
+
+
+
+#resumeMonth {  display: flex;  flex-direction: column;}
+
+.containerResume {  width: 80%;
+  height: 15x0px;  background-color: hsl(229deg 28% 96%);
+  padding: 1px 30px 10px 20px;  border-radius: 10px;
+}
+.containerResume button {  border: none;
+  background-color: rgba(250, 235, 215, 0);
+  text-decoration: underline;  cursor: pointer;
+  padding-left: 0px;
+}
+.containerResume button:hover {  color: hsl(243, 100%, 62%);}
+.containerResume h4 {  margin-bottom: 0px;}
+.containerResume span {  display: block;  margin-top: 0px;
+  height: 1px;  background-color: hsl(231deg 18% 88%);}
+
+.flexResume {  display: flex;  justify-content: space-between;}
+.flexResume label {  display: flex;  align-items: center;}
+.flexTotal {  display: flex;  justify-content: space-between;
+  align-items: center;  padding: 0px 0px 0px 0px;
+  margin: 15px 0px 0px 0px;  width: 80%;
+  padding: 1px 20px 10px 20px;  border-radius: 10px;}
+.flexTotal span {  font-size: 20px;  color: hsl(243, 100%, 62%);}
+
+.stepAddOn input:checked {  color: blue;}
+
+.backBtn {  border: none;  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 16px;  color: hsl(231, 11%, 63%);}
+.backBtn:hover { color: hsl(240, 3%, 15%);}
+
+.dollar {  margin-left: -239px;}
+.underMedia {  flex-direction: column;}
+.flexError {  display: flex;  text-align: center;
+  justify-content: space-between;
+}
+
+.flexError span {  padding-top: 19px;}
+#errorName {  color: red;  font-size: 12px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+
+
+  .container {    display: flex;
+    flex-direction: column; background-color: hsl(227, 36%, 90%);
+    margin-top: 3%;    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 20px 20px 20px rgba(47, 18, 18, 0.101);
+    width: 375px;    height: 680px;  }
+
+  .displayStep {    display: flex;    justify-content: center;
+    width: 100%;    height: 172px;
+    background-color: rgba(30, 16, 186, 0);
+    background-image: url(./assets/image/bg-sidebar-mobile.svg);
+    border-radius: 10px;
+  }
+
+  .stepContainer {    background-color: rgb(255, 255, 255);
+    width: 300px;    height: 520px;
+    position: absolute;    margin-top: 90px;
+    margin-left: 40px;    margin-right: auto;
+    margin-bottom: auto;    border-radius: 10px;    padding: 20px;
+  }
+
+
+
+
+  .buttonContainer {
+    display: flex;    justify-content: space-between;
+    background-color: rgba(0, 255, 51, 0);    padding-bottom: 39px;
+  }
+
+
+
+
+
+
+  .steps {    display: none;  }
+  .circle {    position: relative;    width: 50%;    color: white;
+    font-weight: 500;    height: 2%;    display: flex;
+    flex-direction: row;
+  }
+  .circle p {    margin-top: 5px;  }
+  .circle_active {    width: 30px;    height: 30px;
+    border-radius: 20px;    background-color: rgb(255, 255, 255);
+    border: solid 1px white;    display: flex;
+    justify-content: center;    color: black;
+  }
+  .circle_default {    width: 30px;    height: 30px;
+    border-radius: 20px;    background-color: rgba(0, 0, 0, 0);
+    border: solid 1px white;    display: flex;
+    justify-content: center;
+  }
+ 
+  #stepInfo {    display: flex;    flex-direction: column;  }
+
+  .stepInfo h1 {    margin-top: 0;  }
+
+  #stepInfo input {width: 100%; height: 40px;
+    border-radius: 5px;
+        border: solid 1px rgba(103, 92, 92, 0.628);
+  }
+  #stepInfo input:focus {
+        border:  solid rgba(101px3, 92, 92, 0.628) !important;
+  }
+  #stepInfo input.error {
+        border: solid 1px rgba(183, 5, 5, 0.628);
+  }
+  #stepPlan {    display: flex;    flex-direction: column;  }
+  .planMonth {    display: flex;    justify-content: space-between;
+    flex-direction: column;  }
+  .stepPlan h1 {    margin-top: 0;  }
+  .stepAddOn h1 {    margin-top: 0;    margin-left: 30px;  }
+  .stepSummary h1 {    margin-top: 0;    margin-left: 37px;  }
+
+
+
+
+
+
+  .planButton {    display: flex;    flex-direction: row;
+    border-radius: 10px;    width: 100%;
+    height: 66px;    border: solid 1px hsl(229, 24%, 87%);
+    background-color: white;    margin-top: 10px;
+    cursor: pointer;  }
+  .planButton p {    font-size: 16px;    margin-top: 4px;
+    margin-left: 8px;    margin-bottom: 0px;  }
+
+  .planButton span {    cursor: pointer;   
+    font-size: 12px;    margin-top: 23px;    position: absolute;  }
+  .planButton .yeartype {    cursor: pointer; 
+    font-size: 12px;    margin-top: 39px;    position: absolute;  }
+  .underMedia {    flex-direction: column;  }
+  .free {   cursor: pointer;    margin-left: 57px;
+    font-size: 12px;    margin-top: 41px;    position: absolute;  }
+  .addOnButton {    display: flex;  justify-content: space-between;
+    align-items: center;    margin-top: 10px;
+    border: solid 1px hsl(229, 24%, 87%); border-radius: 10px;
+    height: 73px;    padding: 0px 7px 0px 2px;  }
+  .addOnButton p {    margin-left: 11px;  }
+  .addOnButton span {    margin-left: 12px;    font-size: 11px;  }
+  .prix {    padding-right: 0px;    font-size: 12px;
+      font-weight: normal;  }
+  .AddSize {    padding-top: 0px;    font-weight: bold;
+    font-size: 13px;  }
+  .containerResume {    width: 80%;
+    height: 15x0px;    background-color: hsl(229deg 28% 96%);
+    padding: 1px 20px 10px 20px;
+    border-radius: 10px;
+  }
+  .containerResume button {
+    border: none;    background-color: rgba(250, 235, 215, 0);
+    text-decoration: underline;    cursor: pointer;
+    padding-left: 0px;
+  }
+  .containerResume button:hover {    color: hsl(243, 100%, 62%);  }
+  .containerResume h4 {    margin-bottom: 0px;  }
+  .containerResume span {    display: block;
+    margin-top: -7px;    height: 1px;
+    background-color: hsl(231deg 18% 88%);
+  }
+  .containerResume {    width: 80%;    height: 15x0px;
+    background-color: hsl(229deg 28% 96%);
+    padding: 1px 30px 10px 20px;    border-radius: 10px;
+  }
+  .flexTotal {
+    display: flex;    justify-content: space-between;
+    align-items: center;
+    padding: -31px -1px 21px 17px;
+  }
+  .flexTotal span {    font-size: 20px; color: hsl(243, 100%, 62%);
+    margin-right: -4px;  }
+  .flexResume p {    font-size: 12px;  }
+  .flexResume label {    font-size: 14px;  }
+  #totalPrice {    margin-left: -210px;  }
+
+  
+}

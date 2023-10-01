@@ -1,0 +1,18 @@
+/* #displayStep {  
+    background-image:  url("../assets/image/logo.svg");
+  }
+
+
+@media (max-width: 1000px) {
+ 
+  #displayStep {   
+    background-image: url(../assets/image/bg-sidebar-mobile.svg);   
+  }
+
+  #step1{
+    display: none;
+  }
+  #step2{
+    display: none;
+  }
+}   */
