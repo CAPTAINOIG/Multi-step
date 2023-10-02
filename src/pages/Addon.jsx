@@ -11,26 +11,26 @@ const Addon = () => {
     })
 
     const store = useSelector(state => state.plan.planData)
-    console.log(store);
+    // console.log(store);
     const available = ([
         {
             name: 'Online services',
             desc: 'Access to multiplayer games',
-            monthly: '1',
-            yearly: '10',
+            monthly: 1,
+            yearly: 10,
             id: 1
         },
         {
             name: 'Larger storage',
             desc: 'Extra 1TB of cloud save',
-            monthly: '2',
-            yearly: '20',
+            monthly: 2,
+            yearly: 20,
             id: 2
         }, {
             name: 'Customizable profile',
             desc: 'Custom theme on your profile',
-            monthly: '2',
-            yearly: '20',
+            monthly: 2,
+            yearly: 20,
             id: 3
         },
     ])
@@ -90,11 +90,7 @@ const Addon = () => {
                             </div>
                             <p className="prix">+${addOn?.isYearPlanLength ? item.yearly : item.monthly}/ {!addOn?.isYearPlanLength ? "mo" : "yr"}</p>
                         </div>
-
-
-
                     </label>
-
                 ))
             }
 

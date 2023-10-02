@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { handleChange, handleNextStep, handlePreviousStep } from '../redux/plan'
 
@@ -13,20 +13,42 @@ const Summary = () => {
         addOnTypes: [],
         addOnTotalAmount: 0
     })
+    // var a  = 0
+
+    // const  g = useRef(2)
+
 
     useEffect(() => {
         setSummary((prev) => ({ ...store }))
     }, [])
 
+    // g.current = 3
+    useEffect(() => {
+      let totalAddOn = 0
+        store.addOnTypes?.map(item=>{
+            if(store.isYearPlanLength){
+                totalAddOn += Number(item.yearly)
+            }else{
+                totalAddOn += Number(item.monthly)
+            }
+            // return item
+        })
+        console.log(totalAddOn)
+
+        setSummary(prev => ({...prev, addOnTotalAmount: totalAddOn}))
+        // setCounter(1)
+        // setCounter(prev=> prev + 2)
+    }, [])
+    
 
     // useEffect(() => {
-    //     setSummary((prev) => ({ ...store, AddonTotalAmount: store.isYearPlanLength ? store.AddonTypes?.reduce((a, { yearly }) => a + yearly, 0) : store.AddonTypes?.reduce((a, { monthly }) => a + monthly, 0) }))
+        // [1,2,3] [{}, {}]    //     setSummary((prev) => ({ ...store, AddonTotalAmount: store.isYearPlanLength ? store.AddonTypes?.reduce((a, { yearly }) => a + yearly, 0) : store.AddonTypes?.reduce((a, { monthly }) => a + monthly, 0) }))
 
 
     // }, [])
 
     const store = useSelector(state => state.plan.planData)
-    console.log(store);
+    // console.log(store);
 
     const dispatch = useDispatch()
 
@@ -70,7 +92,7 @@ const Summary = () => {
             </div>
             <div className="flex lg:ms-10 mt-5">
                 <p className='font-bold text-2xl'>Total</p>
-                <span className="lg:ms-80 font-bold text-2xl">${summary?.addOnTotalAmount + summary?.planAmount}</span>
+                <span className="lg:ms-80 font-bold ms-40 text-2xl">${summary?.addOnTotalAmount + summary?.planAmount}</span>
             </div>
 
             <div className='lg:flex flex lg:gap-0 gap-[120px] mt-10'>

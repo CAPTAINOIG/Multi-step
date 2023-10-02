@@ -8,7 +8,7 @@ import Pro from '../assets/image/pro.svg'
 
 const Selectplan = () => {
     const store = useSelector(state => state.plan.planData)
-    console.log(store);
+    // console.log(store);
 
 
     const [formData, setFormData] = useState({
