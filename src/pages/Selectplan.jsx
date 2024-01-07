@@ -10,12 +10,12 @@ const Selectplan = () => {
     const store = useSelector(state => state.plan.planData)
     // console.log(store);
 
-
+ 
     const [formData, setFormData] = useState({
         isYearPlanLength: false,
         planType: '',
         planAmount: 0,
-    })
+    }) 
 
     // This is a major way of how the checked work
     // const [isSubsribed, setisSubsribed] = useState(false)
@@ -85,7 +85,6 @@ const Selectplan = () => {
                 <p className='mt-5'>You have the option of monthly or yearly billing.</p>
 
                 <div className="planMonth" id="planMonth">
-
 
                     {
                         availablePlan?.map((item, i) => (

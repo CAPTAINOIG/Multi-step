@@ -14,7 +14,7 @@ const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?
 
 const Schema = yup.object().shape({
     Phone: yup.string().matches(phoneRegExp, 'Invalid phone').required(),
-    Email: yup.string().email('Invalid email format').required(),
+    Email: yup.string().email().required(),
     Name: yup.string().required()
 })
 

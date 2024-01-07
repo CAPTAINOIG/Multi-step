@@ -16,7 +16,8 @@ const Summary = () => {
     // var a  = 0
 
     // const  g = useRef(2)
-
+    
+    const store = useSelector(state => state.plan.planData)
 
     useEffect(() => {
         setSummary((prev) => ({ ...store }))
@@ -47,7 +48,6 @@ const Summary = () => {
 
     // }, [])
 
-    const store = useSelector(state => state.plan.planData)
     // console.log(store);
 
     const dispatch = useDispatch()

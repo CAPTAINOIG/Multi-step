@@ -32,7 +32,7 @@ export const slice = createSlice({
         handleNextStep: (state, action)=> {
             state.planData = {...state.planData, ...action.payload}
             state.planData.currentStep++
-            localStorage.setItem("subscription", JSON.stringify(state.planData))
+            localStorage.setItem("subscription", JSON.stringify(state.planData)) 
         },
 
         handlePlanLength: (state, action) =>{

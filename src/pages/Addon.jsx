@@ -80,8 +80,8 @@ const Addon = () => {
 
 
                             <div className="regroup">
-                                <input type="checkbox" checked={addOn.addOnTypes.some(val => val.id === item.id)} id={`addon${item.id}`}
-                                    name="addOn" onChange={(e) => handleChange(item, item.id)} />
+                                <input type="checkbox" checked={addOn.addOnTypes.some(val => val.id === item.id)}
+                                 id={`addon${item.id}`} name="addOn" onChange={(e) => handleChange(item, item.id)} />
                             </div>
 
                             <div className="addOn">
